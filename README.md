@@ -1,2 +1,2 @@
 # WHOLENESS
-This is  a health and fitness website
+This is  a health and fitness website.
