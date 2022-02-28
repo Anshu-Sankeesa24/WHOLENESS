@@ -6,7 +6,7 @@ from django.shortcuts import redirect, render,HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
-from mega import settings
+from WHOLENESS import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_decode
