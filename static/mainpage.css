@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+}
+
+img{
+    height: 2cm;
+    float: left;
+    position: relative;
+    bottom: 10px;
+}
+
+nav{
+    height: 2.5cm;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(170, 159, 159, 0.5);
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
+body{
+    background: linear-gradient(-45deg, #f19ce6, #e66194, #4191db, #352da7);
+    background-size: 1000% 2000%;
+    animation: gradient 15s ease infinite;
+}
+
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+      }
+    50%{
+        background-position: 100% 50%;
+      }
+    100%{
+        background-position: 0% 50%;
+      }
+}

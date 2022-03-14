@@ -1,0 +1,132 @@
+body{
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  margin: 0;
+  justify-content: center;
+}
+img{
+  height: 2cm;
+  width: 2cm;
+}
+a{
+  text-decoration: none;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 13cm;
+  width: 10cm;
+}
+div{
+  color: rgb(0, 0, 0);
+  padding: 5px;
+}
+button{
+  margin: 5px;
+  height: 1.5cm;
+  width: 3cm;
+  border-radius: 5px;
+  color: rgb(179, 165, 165);
+  background-color: rgb(71, 158, 230);
+  cursor: pointer;
+  position: relative;
+  top: 3cm;
+}
+a{
+  color: #000000;
+}
+button:hover{
+  background-color: rgb(28, 128, 209);
+}
+input{
+    color: white;
+    background-color: rgb(1, 22, 6);
+    height: 1cm;
+    width: 6cm;
+    position: relative;
+    top: 0.7cm;
+}
+
+.dropbtn{
+    position: absolute;
+    right: 0.25cm;
+    top: 0.156cm;
+}
+/*dropdown*/
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 1.2cm;
+    height: 1.15cm;
+    border-radius: 0%;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+
+
+  body{
+    /* background: linear-gradient(-45deg, #f14c8f, #fbc1c1,#f9db7b, #97ae); */
+   /* background: linear-gradient(-45deg, #f5b301, #fed053,#f9db7b, #97ae); */
+  background: linear-gradient(-45deg, #f078c0,#7baae7, #fb557c);
+  /* background: linear-gradient(-45deg, #01a66f, #75ce9f,#bdd99e, #ffc06e); */
+     background-size: 100% 1%;
+     animation: gradient 20s ease infinite;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(anydore/Anydore.otf);
+}
+@font-face {
+    font-family: mySecondFont;
+    src: url(als-script/alsscrp.ttf);
+}
+
+h1{
+    font-family: mySecondFont;
+    font-size: 3.5em;
+    margin: 20px;
+}
+
+h2{
+    font-family: myFirstFont;
+}
