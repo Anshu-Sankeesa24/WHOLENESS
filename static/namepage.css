@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    margin: 0;
+    justify-content: center;
+}
+img{
+    height: 2cm;
+    width: 2cm;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 13cm;
+    width: 10cm;
+}
+div{
+    color: rgb(0, 0, 0);
+    padding: 5px;
+}
+
+button{
+    margin: 5px;
+    height: 1.5cm;
+    width: 3cm;
+    border-radius: 5px;
+    color: rgb(179, 165, 165);
+    background-color: rgb(71, 158, 230);
+    cursor: pointer;
+    position: relative;
+    top: 3cm;
+}
+a{
+    color: #000000;
+}
+button:hover{
+    background-color: rgb(28, 128, 209);
+}
+input{
+    color: white;
+    background-color: rgb(1, 22, 6);
+    height: 1cm;
+    width: 6cm;
+    position: relative;
+    top: 0.7cm;
+
+}
+
+
+
+
+
+body{
+    /* background: linear-gradient(-45deg, #f14c8f, #fbc1c1,#f9db7b, #97ae); */
+   /* background: linear-gradient(-45deg, #f5b301, #fed053,#f9db7b, #97ae); */
+  background: linear-gradient(-45deg, #f078c0,#7baae7, #fb557c);
+  /* background: linear-gradient(-45deg, #01a66f, #75ce9f,#bdd99e, #ffc06e); */
+     background-size: 100% 1%;
+     animation: gradient 20s ease infinite;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(anydore/Anydore.otf);
+}
+@font-face {
+    font-family: mySecondFont;
+    src: url(als-script/alsscrp.ttf);
+}
+
+h1{
+    font-family: mySecondFont;
+    font-size: 3.5em;
+    margin: 20px;
+}
+
+h2{
+    font-family: myFirstFont;
+}

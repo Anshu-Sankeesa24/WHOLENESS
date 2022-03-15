@@ -1,0 +1,89 @@
+body{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    margin: 0;
+    justify-content: center;
+}
+img{
+    height: 2cm;
+    width: 2cm;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 13cm;
+    width: 10cm;
+}
+div{
+    color: rgb(0, 0, 0);
+    padding: 5px;
+}
+
+button{
+    height: 1.5cm;
+    width: 3cm;
+    border-radius: 5px;
+    color: rgb(179, 165, 165);
+    background-color: rgb(71, 158, 230);
+    cursor: pointer;
+    
+}
+button:hover{
+    background-color: rgb(28, 128, 209);
+}
+a{
+    color: #000000;
+}
+
+.input{
+    border: none;
+    height: 5cm;
+    position: relative;
+    bottom: 15px;
+    right: 0.8cm;
+}
+
+.input div input{
+    height: 0.65cm;
+    width: 0.65cm;
+    float: left;
+}
+.input div label{
+    position: relative;
+    left: 20px;
+    top: 2px;
+}
+.input div{
+    padding-top: 30px;
+}
+
+body{
+    /* background: linear-gradient(-45deg, #f14c8f, #fbc1c1,#f9db7b, #97ae); */
+   /* background: linear-gradient(-45deg, #f5b301, #fed053,#f9db7b, #97ae); */
+  background: linear-gradient(-45deg, #f078c0,#7baae7, #fb557c);
+  /* background: linear-gradient(-45deg, #01a66f, #75ce9f,#bdd99e, #ffc06e); */
+     background-size: 100% 1%;
+     animation: gradient 20s ease infinite;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(anydore/Anydore.otf);
+}
+@font-face {
+    font-family: mySecondFont;
+    src: url(als-script/alsscrp.ttf);
+}
+
+h1{
+    font-family: mySecondFont;
+    font-size: 3.5em;
+    margin: 20px;
+}
+
+h2{
+    font-family: myFirstFont;
+}
