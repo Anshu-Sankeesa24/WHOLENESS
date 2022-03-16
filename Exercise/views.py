@@ -12,11 +12,22 @@ from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_decode
 from django.utils.encoding import force_bytes
 from . tokens import generate_token
+from formtools.wizard.views import SessionWizardView
+from .forms import nameform,genderform,ageform,heightform,weightform,emailform
 
 
 # Create your views here.
 def index(request):
     return render(request,"Exercise/index.html")
+
+class signup(SessionWizardView):
+    template_name='Exercise/msf.html'
+    form_list= [nameform,genderform,ageform,heightform,weightform,emailform]
+
+    def done(self, form_list, **kwargs):
+        form_data = [form.cleaned_data for form in form_list]
+
+        return render(self.request, 'Exercise/home.html', {'data': form_data})
 
 def signin(request):
     
@@ -30,14 +41,14 @@ def signin(request):
         if user is not None:
             login(request,user)
             fname=user.first_name
-            return render(request,"../Exercise/home.html", {'fname':fname})
+            return render(request,"Exercise/home.html", {'fname':fname})
         else:
             messages.error(request,"Invalid Credtials")
             return redirect('signin')
 
-    return render(request,"../Exercise/login.html")
+    return render(request,"Exercise/login.html")
 
-def signup(request):
+def signup1(request):
     if request.method=="POST":
         username=request.POST['username']
         fname=request.POST['fname']
@@ -103,7 +114,8 @@ def signup(request):
 
         return redirect('signin')
 
-    return render(request,"../Exercise/namepage.html")
+    return render(request,"Exercise/namepage.html")
+
 
 def logout(request):
     logout(request)
