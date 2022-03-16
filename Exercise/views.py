@@ -16,7 +16,7 @@ from . tokens import generate_token
 
 # Create your views here.
 def index(request):
-    return render(request,"/Exercise/index.html")
+    return render(request,"Exercise/index.html")
 
 def signin(request):
     
