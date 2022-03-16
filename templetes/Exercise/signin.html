@@ -1,4 +1,3 @@
-<!-- backup plan-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="/static/index.css">
+    <link rel="stylesheet" href="../../static/loginpage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <form action='/signin' method ='post'>
-        {% for message in messages %}
+        <!--{% for message in messages %} -->
         <div class="alret-{{message.tags}} alert-dismissible fade show" role='alert'>
-        <strong><center>{{message}}</center></strong> 
-        <!--   <button type ='button' class ='close' data-dimiss='alert' aria-label='close'> 
+            <!-- <strong><center>{{message}}</center></strong>  
+        <button type ='button' class ='close' data-dimiss='alert' aria-label='close'> 
         <span aria-hidden='true'>&times;</span> 
-        </button>     -->
+        </button> -->   
         </div>
-        {% endfor %}
+        <!--{% endfor %} -->
         
-    {% csrf_token %}
+    <!--{% csrf_token %} -->
     <div class="wrapper">
         <h3><center>LOGIN</center></h3>
         <div class="container">
-            <img src="/static/wholenesslogo.png" alt="#">
+            <img src="../../static/wholenesslogo.png" alt="#">
 
             <div> <i class="fa fa-user" aria-hidden="true"></i> <input type='text' id='username' name="username" placeholder ="Username" required></div>
         
@@ -34,7 +33,7 @@
     
             <a class="forgot" href="http://">Forgot Password?</a>
     
-            <div>Not a Member? <a href="/signup">SignUp</a></div>
+            <div>Not a Member? <a href="../Exercise/signup.html">SignUp</a></div>
     
         </div>
 

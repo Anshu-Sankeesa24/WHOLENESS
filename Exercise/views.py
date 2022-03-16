@@ -15,8 +15,8 @@ from . tokens import generate_token
 
 
 # Create your views here.
-def home(request):
-    return render(request,"Exercise/index.html")
+def index(request):
+    return render(request,"/Exercise/index.html")
 
 def signin(request):
     
@@ -30,12 +30,12 @@ def signin(request):
         if user is not None:
             login(request,user)
             fname=user.first_name
-            return render(request,"Exercise/index.html", {'fname':fname})
+            return render(request,"../Exercise/home.html", {'fname':fname})
         else:
             messages.error(request,"Invalid Credtials")
             return redirect('signin')
 
-    return render(request,"Exercise/signin.html")
+    return render(request,"../Exercise/login.html")
 
 def signup(request):
     if request.method=="POST":
@@ -103,12 +103,12 @@ def signup(request):
 
         return redirect('signin')
 
-    return render(request,"Exercise/signup.html")
+    return render(request,"../Exercise/namepage.html")
 
-def signout(request):
+def logout(request):
     logout(request)
     messages.success(request,"Logged out Successfully!")
-    return redirect('home')
+    return redirect('index')
 
 '''def activate(request, uidb64,token):
     try:
