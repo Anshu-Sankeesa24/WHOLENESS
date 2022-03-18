@@ -6,50 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Height Page</title>
     <link rel="stylesheet" href="../../static/heightpage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="title"><h1>Wholeness</h1></div>
+        <div class="title">
+          <img src="../../static/wholenesslogo.png" alt="">
+        </div>
         <div><h2>What's Your Height ?</h2></div>
         <div class="input">
-            <input type="text" name="weight" id="weight" placeholder="Height">
+            <input type="text" name="height" id="height" placeholder="Height">
             <label class="label" for="fomats">
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">in?</button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="#">Cm</a>
-                      <a href="#">m</a>
-                      <a href="#">inch</a>
-                      <a href="#">feet</a>
-                    </div>
+                    <select id="select1">
+                        <option value="feet">feet</option>
+                        <option value="cm">cm</option>
+                        <option value="m">m</option>
+                        <option value="inch">inch</option>
+                    </select>
                 </div>
             </label>
         </div>
         <div>
-          <button type="submit"><a href="../Exercise/weightpage.html">Next</a></button>
+          <button type="submit"><a href="">Next</a></button>
         </div>
     </div>
 </body>
 
 <script>
-    /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+function getOption() {
+        selectElement = document.querySelector('#select1');
+        output = selectElement.value;
+        document.querySelector('.output').textContent = output;
     }
-  }
-}
+
 </script>
 </html>
