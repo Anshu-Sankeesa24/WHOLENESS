@@ -6,6 +6,7 @@ from django.shortcuts import redirect, render,HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
+from Exercise.models import user_details
 from WHOLENESS import settings
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
@@ -20,14 +21,35 @@ from .forms import nameform,genderform,ageform,heightform,weightform,emailform
 def index(request):
     return render(request,"Exercise/index.html")
 
+def register(request):
+    if request.method=="POST":
+        fname=request.POST['fname']
+        lname=request.POST['lname']
+        email=request.POST['email']
+        gender=request.POST['gender']
+        dob=request.POST['dob']
+        height=request.POST['height']
+        weight=request.POST['weight']
+        
+        myuser= user_details(first_name=fname,last_name=lname,gender=gender,date_of_birth=dob,height=height,weight=weight,email=email)
+        myuser.save()
+        return redirect('/signin')
+    return render(request,'Exercise/register.html')
+
 class signup(SessionWizardView):
     template_name='Exercise/msf.html'
     form_list= [nameform,genderform,ageform,heightform,weightform,emailform]
 
+    form_name=nameform()
+    if form_name.is_valid():
+        form_name.save()
+
+
+
     def done(self, form_list, **kwargs):
         form_data = [form.cleaned_data for form in form_list]
 
-        return render(self.request, 'Exercise/home.html', {'data': form_data})
+        return render(self.request, 'Exercise/signin.html', {'form': form_data})
 
 def signin(request):
     
