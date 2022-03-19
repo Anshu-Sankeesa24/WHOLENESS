@@ -3,13 +3,28 @@ body{
     display: flex;
     margin: 0;
     justify-content: center;
+    /* background: linear-gradient(-45deg, #f14c8f, #fbc1c1,#f9db7b, #97ae); */
+   /* background: linear-gradient(-45deg, #f5b301, #fed053,#f9db7b, #97ae); */
+  background: linear-gradient(-45deg,#253439,#8e99a2,#fff6ea);
+  /* background: linear-gradient(-45deg, #01a66f, #75ce9f,#bdd99e, #ffc06e); */
+     background-size: 100% 1%;
+     animation: gradient 20s ease infinite;
 }
 img{
     height: 3cm;
     width: 3cm;
 }
+
+h2{
+    font-family: mySecondFont;
+    color: #253439;
+    font-size: 180%;
+    /* font-weight: bolder;
+    font-size: larger; */
+}
 a{
     text-decoration: none;
+    color: #fff6ea;
 }
 .container{
     display: flex;
@@ -19,9 +34,7 @@ a{
     width: 10cm;
 }
 
-h1{
-    color: #253439;
-}
+
 div{
     color: rgb(0, 0, 0);
     padding: 5px;
@@ -42,10 +55,12 @@ button{
     cursor: pointer;
     position: relative;
     top: 2.6cm;
+    font-family: myFirstFont;
+    /* font-weight: bolder;
+    font-size: larger; */
 }
-a{
-    color: #fff6ea;
-}
+
+
 button:hover{
     background-color: #292f31;;
 }
@@ -56,50 +71,24 @@ input{
     position: relative;
     top: 0.7cm;
     border-radius: 8px;
-}
-
-input{
     background-color: #fff6ea;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #253439;
 }
 
-
-
-body{
-    /* background: linear-gradient(-45deg, #f14c8f, #fbc1c1,#f9db7b, #97ae); */
-   /* background: linear-gradient(-45deg, #f5b301, #fed053,#f9db7b, #97ae); */
-  background: linear-gradient(-45deg,#253439,#8e99a2,#fff6ea);
-  /* background: linear-gradient(-45deg, #01a66f, #75ce9f,#bdd99e, #ffc06e); */
-     background-size: 100% 1%;
-     animation: gradient 20s ease infinite;
-}
 
 @font-face {
     font-family: myFirstFont;
     src: url(belleza/Belleza-Regular.ttf);
 }
 
-button{
-    font-family: myFirstFont;
-    /* font-weight: bolder;
-    font-size: larger; */
-}
+
 @font-face {
     font-family: mySecondFont;
     src: url(als-script/alsscrp.ttf);
 }
 
-h2{
-    font-family: mySecondFont;
-    color: #253439;
-    font-size: 180%;
-    /* font-weight: bolder;
-    font-size: larger; */
-}
 @font-face {
     font-family: myThirdFont;
     src: url(anydore/Anydore.otf);
-}
-input{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #253439;
 }
