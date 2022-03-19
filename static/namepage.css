@@ -40,6 +40,18 @@ div{
     padding: 5px;
 }
 
+input{
+    color: white;
+    height: 1.2cm;
+    width: 6cm;
+    position: relative;
+    top: 0.7cm;
+    border-radius: 8px;
+    background-color: #fff6ea;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #253439;
+}
+
 ::placeholder{
     position: relative;
     left: 10px;
@@ -64,17 +76,6 @@ button{
 button:hover{
     background-color: #292f31;;
 }
-input{
-    color: white;
-    height: 1.2cm;
-    width: 6cm;
-    position: relative;
-    top: 0.7cm;
-    border-radius: 8px;
-    background-color: #fff6ea;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #253439;
-}
 
 
 @font-face {
@@ -92,3 +93,6 @@ input{
     font-family: myThirdFont;
     src: url(anydore/Anydore.otf);
 }
+
+
+
