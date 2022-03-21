@@ -1,0 +1,6 @@
+.details{
+    padding: 30px;
+    display: grid;
+    grid-gap: 30px;
+    font-size: larger;
+}
