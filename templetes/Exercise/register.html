@@ -13,12 +13,19 @@
 </head>
 <body>
 <div class="container">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info">{{ message}}</div>
+    {% endfor %}
+    {% endif %}
     <div class="title">
         <h1>Wholeness</h1>
     </div>
         
     <!-- multistep form -->
-    <form id="msform" class="row g-3 needs-validation" novalidate>
+    <form method ="POST" id="msform" class="row g-3 needs-validation" nonvalidate>
+        {% csrf_token %}
+        
         <div class="col-md-4">
             <!-- progressbar -->
             <ul id="progressbar">
@@ -30,9 +37,9 @@
             </ul>
             <!-- fieldsets -->
             <fieldset>
-                <h2 class="fs-title">What's your name</h2>
+                <h2 class="fs-title" >What's Your Name</h2>
                 <h3 class="fs-subtitle">This is step 1</h3>
-                <input type="text" class="form-control" id="validationTooltip1" name="fname" placeholder="First name"
+                <input type="text"  name="fname" placeholder="First name"
                     required />
                 <input type="text" name="lname" placeholder="Last name" required/>
                 <input type="button" name="next" class="next action-button" value="Next" />
@@ -43,16 +50,16 @@
     
             <fieldset>
                 <div>
-                    <h2>What's Your Gender ?</h2>
+                    <h2 class="fs-title">What's Your Gender ?</h2>
                 </div>
                 <div>
-                    <input class="form-check-input" type="radio" name="male" id="male" value="opt1" checked>
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
                     <label class="form-check-label" for="male">Male</label>
     
-                    <input class="form-check-input" type="radio" name="female" id="female" value="opt2">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
                     <label class="form-check-label" for="female">Female</label>
     
-                    <input class="form-check-input" type="radio" name="other" id="other" value="opt3">
+                    <input class="form-check-input" type="radio" name="gender" id="other" value="other">
                     <label class="form-check-label" for="other">Others</label>
                 </div>
     
@@ -116,7 +123,7 @@
                 <div class="invalid-tooltip">
                     Please provide a valid email address.
                 </div>
-                <button type="submit" ><a href="homepage.html">Verify</a></button>
+                <button type="submit" class="btn btn-primary btn-block mt-2" ><a>Verify</a></button>
             </fieldset>
         </div>
     </form>

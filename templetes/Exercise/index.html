@@ -10,6 +10,14 @@
 <body>
     
     <header>
+        <form method ="post">
+            {% csrf_token %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-info">{{ message}}</div>
+            {% endfor %}
+            {% endif %}
+        
         <nav>
             <a href="">
                 <img src="../../static/wholenesslogo.png" alt="">
@@ -24,7 +32,10 @@
             
             
             <span class="flex-align-right">
-                <a href="#">Login</a><span> / </span><a href="#">SignUp</a>
+                <a href="/login">Login</a><span> / </span><a href="/signup">SignUp</a>
             </span>
         
         </nav>
+        </form>
+    </header>
+</body>
