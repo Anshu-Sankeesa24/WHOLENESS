@@ -45,6 +45,7 @@ def register(request):
             #return redirect('index')
         
     return render(request,'Exercise/register.html')
+    
 
 def send_mail_verify(email):
     subject ="you account nees to be verified"
