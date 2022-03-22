@@ -22,6 +22,14 @@ body {
 	
 	font-family: montserrat, arial, verdana;
 }
+
+img{
+    height: 3cm;
+    width: 3cm;
+	position: relative;
+	left: 3.8cm;
+	top: 10px;
+}
 /*form styles*/
 #msform {
 	width: 400px;
@@ -120,7 +128,7 @@ body {
 	content: '';
 	width: 100%;
 	height: 2px;
-	background: white;
+	background: #40555c;
 	position: absolute;
 	left: -50%;
 	top: 9px;
