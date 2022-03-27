@@ -15,8 +15,16 @@
 <body>
 
     <header>
+        {% for message in messages %} 
+        <div class ="alert alert-{{ message.tags }} alert-dismissible fade show" role=""alert>
+            <strong>{{ message }}</strong>
+            <button type ="button" class ="close" data-dismissible="alert" aria-label="close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
 
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <img class="logo" src="../../static/wholenesslogo.png" alt="">
                 
@@ -45,12 +53,18 @@
                       <li><a class="dropdown-item" href="#">Profile</a></li>
                       <li><a class="dropdown-item" href="#">WishList</a></li>
                       <li><a class="dropdown-item" href="#">Settings</a></li>
-                      <li><a class="dropdown-item" href="#">LogOut</a></li>
+                      <li><a class="dropdown-item" href="/logout">LogOut</a></li>
                     </ul>
                 </div>
                 
             </div>
+
         </nav>
+        {% if user.is_authenticated %}
+        <h1>  </h1>
+        <h3 >hello {{fname}}, </h3>
+        <h4>you are successfully logged in </h4>
+        {% endif %}
 
     </header>
 

@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+admin.site.site_header="Wholeness"
+admin.site.site_title="Wholeness"
+admin.site.index_title="welcome to Wholeness"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Exercise.urls')),
