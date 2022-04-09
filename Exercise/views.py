@@ -1,4 +1,5 @@
 from base64 import urlsafe_b64decode, urlsafe_b64encode
+from datetime import datetime
 from email import message
 import email
 from lib2to3.pgen2.tokenize import generate_tokens
@@ -25,8 +26,16 @@ from django.conf import settings
 def index(request):
     return render(request,"Exercise/index.html")
 
-def home(request):
-    return render(request,"Exercise/home.html")
+def home(request,user=''):
+    
+    # dob=user.dob
+    # age=datetime.today-dob
+    # gender=user.gender
+    context={ "age":40,  "gender":'male'}
+   
+
+
+    return render(request,"Exercise/home.html",context)
 
 def register(request):
     if request.method=="POST":
@@ -95,12 +104,15 @@ def activate(request,uidb64,token):
     
     if my_user is not None and generate_token.check_token(my_user,token):
         my_user.is_verified=True
+        print("hii")
         my_user.save()
         return redirect('email_confirmation.html')
     
     else:
-        return render(request,'Exercise/register.html')
+        return render(request,'Exercise/login.html')
     
+def error(request):
+    return render(request,'Exercise/error.html')
 
 
 
@@ -116,13 +128,31 @@ def login(request):
         if user is not None:
             login(request,user)
             fname=user.first_name
-            return render(request,"Exercise/home.html", {'fname':fname})
+            return redirect('home',user)
+            #return render(request,"Exercise/home.html", {'fname':fname})
         else:
             messages.error(request,"Invalid Credtials")
             return redirect('signin')
 
     return render(request,"Exercise/login.html")
 
+
+
+
+def workout(request):
+    return render(request,'Exercise/workoutpage.html')
+
+def profile(request):
+    return render(request,'Exercise/profilepage.html')
+
+def diseases(request):
+    return render(request,'Exercise/diseasemainpage.html')
+
+def food(request):
+    return render(request,'Exercise/foodpage.html')
+
+def settings(request):
+    return render(request,'Exercise/settingspage.html')
 
 
 def logout(request):
