@@ -67,14 +67,14 @@
     </header>
 
 
-<div id="aSide ">
-    <div id='aside img'>
+<div class="aSide ">
+    <div class='aside img'>
     <!--<img src="../../static/background.png" alt=""> -->
     {% if age <= 20 and gender == 'male' %}
         <a href="/workout">
             <model-viewer src="../../static/boy.glb" alt="model robot" auto-rotate camera-controls arios-src="../../static/boy.glb" ></model-viewer>
         </a>
-    {% elif age <= 50 and gender == 'male' %}
+    {% elif age > 20 and age <= 50 and gender == 'male' %}
         <a href="/workout">
             <model-viewer src="../../static/men.glb" alt="model robot" auto-rotate camera-controls arios-src="../../static/men.glb" ></model-viewer>
         </a>
@@ -83,7 +83,7 @@
         <a href="/workout">
             <model-viewer src="../../static/girl.glb" alt="model robot" auto-rotate camera-controls arios-src="../../static/boy.glb" ></model-viewer>
         </a>
-    {% elif age <= 50 and gender == 'female' %}
+    {% elif age > 20 and age <= 50 and gender == 'female' %}
         <a href="/workout">
             <model-viewer src="../../static/women.glb" alt="model robot" auto-rotate camera-controls arios-src="../../static/women.glb" ></model-viewer>
         </a>

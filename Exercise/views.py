@@ -30,8 +30,8 @@ def home(request,user=''):
     
     # dob=user.dob
     # age=datetime.today-dob
-    # gender=user.gender
-    context={ "age":40,  "gender":'male'}
+    # gender=str(user.gender)
+    context={ "age":40,  "gender":'female'}
    
 
 
@@ -100,13 +100,13 @@ def activate(request,uidb64,token):
         my_user =profile.objects.get(pk=uid)
 
     except(TypeError,ValueError,OverflowError,profile.DoesNotExist):
-        my_user=None
+         my_user=None
     
     if my_user is not None and generate_token.check_token(my_user,token):
         my_user.is_verified=True
         print("hii")
         my_user.save()
-        return redirect('email_confirmation.html')
+        return redirect('create_account.html')
     
     else:
         return render(request,'Exercise/login.html')
@@ -116,7 +116,7 @@ def error(request):
 
 
 
-def login(request):
+def login(request,my_user):
     
     if request.method=="POST":
         username=request.POST['username']

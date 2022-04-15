@@ -135,19 +135,21 @@ a{
   /* font-weight: bolder;
   font-size: larger; */
 }
-#aSide {
+.aSide {
     height: 600px;
     width: 600px;
     position:absolute;
     top: calc(50% - 300px);
-    left: 7%;
+    left: 2%;
+    margin-top: 5px;
 }
 
-#aSide img,
+.aSide img,
 model-viewer {
     height: 600px;
     width: 600px;
     position: absolute;
     top:20px;
-    left: 7%;
+    left: 2%;
+    margin-top: 5px;
 }
